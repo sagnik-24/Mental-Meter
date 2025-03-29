@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <script src="main.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>(function(){emailjs.init("vk3hJ0_1bc2nsV_Uj"); })();</script>
+
+    <title>Mental Meter</title>
+</head>
+
+<body>
+    <div id="wel">
+        <h1 >WELCOME</h1>
+        <h4 class="ct">Hey there! 😊Ready to check in with your mind? Our quick assessment helps you understand your mental well-being in a simple and insightful way. To improve our research and provide better insights, we’d love to securely store your responses for surveys and analysis. Do we have your permission?
+            🔒 Your privacy matters! All data is kept anonymous and used only for mental health research.
+            Let’s begin! 🚀
+        </h4>
+        <button id="button"  onclick="show()" type="submit">YES, Let's do it</button> 
+        <button id="btn"  onclick="popup()"  type="submit" class="2">No</button>
+    </div>
+
+    <div class="popup">
+        <span class="popuptext" id="Popup">Sorry, Our policies only support if you share your data for our analysis.</span>
+      </div>
+
+    <div id="data">
+        <h2>Enter Your Details</h2>
+        <input type="text" placeholder="Enter your name" id="name"/>
+        <input type="text" placeholder="Enter your Country" id="country">
+        <input type="email" placeholder="Enter your email address" id="email"/>
+        <input type="date" placeholder="Enter your date of birth" id="dob"/>
+        <input type="number" placeholder="Enter your weight (kg)" id="weight"/>
+        <input type="number" placeholder="Enter your height (feets)" id="height"/>
+
+        <button type="submit" id="dtb" onclick="data()">Submit</button>
+    </div>
+
+    <div id="question">
+        <h2 id="c">1 out of 10</h3>
+        <h3 id="qs">Do you often feel like a phone running on 1% battery… but no charger in sight? (WHO: Chronic stress drains mental health.)</h3>
+        <div class="options">
+            <label><input type="radio" name="rating" value="1"> Strongly Disagree </label><br>
+            <label><input type="radio" name="rating" value="2"> Disagree</label><br>
+            <label><input type="radio" name="rating" value="3"> Neutral</label><br>
+            <label><input type="radio" name="rating" value="4"> Agree</label><br>
+            <label><input type="radio" name="rating" value="5"> Strongly Agree</label>
+        </div>
+        <button id="submit" onclick="QNS()">Next</button>
+    </div>
+
+    <div id="results">
+        <div class="dtls">
+            <h3 id="rname">Sagnik Sengupta</h3>
+            <h3 id="remail">Sagnik.sdves@gmail.com</h3>
+            <h3 id="rcountry">India</h3>
+            <h3 id="rdob">17 years old</h3>
+            <h3 id="rbmi">26</h3>
+        </div>
+        <div class="rslts">
+            <h2 class="results">Your Results are: </h2>
+            <h4 id="mental_status"></h4>
+            <h4 id="action"></h4>
+            <p id="rremail"></p>
+        </div>
+        
+    </div>
+</body>
+
+
